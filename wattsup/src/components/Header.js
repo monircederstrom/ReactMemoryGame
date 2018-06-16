@@ -1,30 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
+import Navbar from "./Navbar";
+//import "../styles/Header.css";
 
+// By importing the Header.css file, it is added to the DOM whenever this component loads
 
-const styles = {
-  subtitle: {
-    background: "red",
-    color: "white"
-  }
-};
-
+// We can also style a component inside of its JavaScript file by adding style properties to its rendered elements
+// Unlike regular HTML, a JSX style property must be an object instead of a string
+// On a style object, we camelCase all property names, and put all of the values in quotes
+// Non quoted values default to "pixels", e.g. height, margin, padding
 // We use JSX curly braces to evaluate the style object
-
-const Header = props => (
-  <div style={styles.subtitle}>
-    
-    <a className="navbar-brand" href="#">Clicky Game</a>
-    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    
-      <h5>Click an image to begin!</h5>
-  
-    <div>
-      score:
-    </div>
-
- </div>
-);
-
-export default Header;
+export default class Header extends Component {
+render() {
+  return(<header className="header"> <Navbar score={this.props.score} topScore={this.props.topScore}/> </header>)
+  const Header = props => <h1 className="header">{props.children}</h1>;
+}
+};

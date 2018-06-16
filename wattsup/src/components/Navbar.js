@@ -1,19 +1,20 @@
-import React from "react";
+import React, { Component } from 'react';
+//import "../styles/Navbar.css";
 
-const Navbar = props => (
-  <nav>
-    <ul>
-      <li className="brand animated lightSpeedIn">
-        <a href="/clickyMemoryGame/">{props.title}</a>
-      </li>
+export default class Navbar extends Component {
 
-      <li id="rw">{props.rightWrong}</li>
-
-      <li id="cur-sco">Current Score: {props.score}</li>
-
-      <li id="top-sco">Top Score: {props.topScore}</li>
-    </ul>
-  </nav>
-);
-
-export default Navbar;
+// the scores are passed in and updated at change
+  render() {
+    return(
+      <div>
+        <nav>
+          <div className="row">
+            <div className="nav-item col-4"> <p className="navbar-brand my-auto">Clicky</p> </div>
+            <div className="nav-item col-4 my-auto"> Click a JJ to begin </div>
+            <div className="nav-item col-4 my-auto"> Current Score : {this.props.score} | Top Score : {this.props.topScore} </div>
+          </div>
+        </nav>
+      </div>
+    )
+  }
+}
