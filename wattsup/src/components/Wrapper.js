@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import Wattpics from "./wattPics";
 import jjwatts from "../jjwatts.json";
-
-
+import Background from "./grass.jpg";
+const styles = {
+    jumbotron: {
+       background: "red",
+       width: "103%",
+       color: "white",
+       textAlign: "center",
+       marginLeft: "-1.5%",
+       fontSize: "50px"
+    },
+    cards: {
+        width: "100%"
+    },
+    pictures: {
+        float: "left"
+    }
+};
 export default class Wrapper extends Component {
 // randomize wattpics
 wattaMix = (a) => {
@@ -22,11 +37,11 @@ handleClick = (id) => {
 render() {
     return(
         <div className="wrapper">
-            <div className="container-fluid">
-                <div className="jumbotron navbar-brand">Click a JJ to begin!</div>
-                <div className="container-fluid friend-box"> 
+            <div className="container-fluid" style={styles.pictures}>
+                <div className="jumbotron navbar-brand" style={styles.jumbotron}>Watt Up Clicky Game</div>
+                <div className="container-fluid friend-box" style={styles.cards}> 
                     {jjwatts.map(image =>
-                    <Wattpics
+                    <Wattpics 
             src = {image.src}
             alt = {image.name}
             id = {image.id}

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 const styles = {
-    card: {
-        width: "18rem",
+    images: {
+        width: "250px",
+        height: "200px"
     }
-};
+}
 export default class Wattpics extends Component  {
     render() {
         return(
-            <img className="img-fluid friend" 
+            <img style={styles.images} className="img-fluid friend" 
             src={this.props.src} 
             alt={this.props.alt}
             onClick={() => {this.props.handleClick(this.props.id)} }
