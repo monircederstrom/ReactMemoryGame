@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Wattpics from "./wattPics";
 import jjwatts from "../jjwatts.json";
-import Background from "./grass.jpg";
+
 const styles = {
     jumbotron: {
        background: "red",
@@ -12,7 +12,8 @@ const styles = {
        fontSize: "50px"
     },
     cards: {
-        width: "100%"
+        width: "100%",
+        marginLeft: "6%"
     },
     pictures: {
         float: "left"
