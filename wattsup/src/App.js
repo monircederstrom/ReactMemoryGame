@@ -15,6 +15,7 @@ class App extends Component {
     score: 0,
     highscore: 0
   };
+
 //game function
 game = () => {
   if (this.state.score > this.state.topscore) {
@@ -22,8 +23,8 @@ game = () => {
       console.log(this.state.topscore);
     });
   }
-  this.state.jjwatts.forEach(wattPics => {
-    wattPics.count = 0;
+  this.state.jjwatts.forEach(Wattpics => {
+    Wattpics.count = 0;
   });
   this.setState({score: 0});
   return true;
@@ -47,12 +48,14 @@ clickCount = id => {
 //render
 render() {
   return (
+    <div>
+         <Header score={this.state.score} topscore={this.state.topscore}>Watts Up Clicky Game</Header>
     <Wrapper>
   
-      <Header score={this.state.score} topscore={this.state.topscore}>Watts Up Clicky Game</Header>
+   
       {this.state.jjwatts.map(card => (
        
-        <Wattpics
+        <Wattpics className="cards"
           clickCount={this.clickCount}
           id={card.id}
           key={card.id}
@@ -61,6 +64,7 @@ render() {
       ))}
      
     </Wrapper>
+    </div>
   );
 }
 }

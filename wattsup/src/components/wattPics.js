@@ -1,7 +1,7 @@
 import React from "react";
 const styles = {
     card: {
-        width: "1rem",
+        width: "18rem",
     }
 };
 const Wattpics = props => (
