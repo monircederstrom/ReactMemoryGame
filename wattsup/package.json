@@ -17,7 +17,6 @@
     "eject": "react-scripts eject"
   },
   "description": "This project uses react to create a memory game",
-  "main": "index.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC"
