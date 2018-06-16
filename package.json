@@ -16,8 +16,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "This project uses react to create a memory game",
-  "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  "description": "This project uses react to create a memory game"
 }
